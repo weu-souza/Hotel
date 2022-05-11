@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:20.1.0'
+    testCompile 'junit:junit:4.12'
+}
