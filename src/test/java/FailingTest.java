@@ -10,7 +10,7 @@ public class FailingTest {
     @Test
     public void test1() {
         HotelReservation Hotel = new HotelReservation();
-         assertEquals("Lakewood", Hotel.getCheapestHotel("regular", LocalDate.of(2009, Month.MARCH,16),
+         assertEquals("Lakewood", Hotel.getCheapestHotel("Regular", LocalDate.of(2009, Month.MARCH,16),
                 LocalDate.of(2009, Month.MARCH,17),LocalDate.of(2009, Month.MARCH,18)));
 
     }
