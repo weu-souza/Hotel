@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class HotelReservation {
     Lakewood l = new Lakewood();
@@ -6,29 +7,18 @@ public class HotelReservation {
     Ridgewood r = new Ridgewood();
 
     public String getCheapestHotel(String tipoCliente, LocalDate data, LocalDate data1, LocalDate data2) {
-
-        l.setTipoCliente(tipoCliente);
-        b.setTipoCliente(tipoCliente);
-        r.setTipoCliente(tipoCliente);
-        return hotelBarato(tipoCliente, data, data1, data2);
-    }
-
-    public String hotelBarato(String tipoCliente, LocalDate data, LocalDate data1, LocalDate data2) {
-
-
         int[] i = new int[]{data(tipoCliente, data), data(tipoCliente, data1), data(tipoCliente, data2)};
         String aux = "";
         if (i[0] == 1) {
             aux = l.getNomeHotel();
-        }  if (i[1] == 2) {
+        }
+        if (i[1] == 2) {
             aux = b.getNomeHotel();
-        }  if (i[2] == 3) {
+        }
+        if (i[2] == 3) {
             aux = r.getNomeHotel();
         }
-
         return aux;
-
-
     }
 
     public int data(String tipoCliente, LocalDate data) {
@@ -56,16 +46,14 @@ public class HotelReservation {
 
                     if (r.getRewardFimDESemana() < l.getRewardFimDESemana() || r.getRewardDiaDaSemana() < b.getRewardFimDESemana()) {
                         x = 3;
+                    } else if (Objects.equals(b.getRewardFimDESemana(), l.getRewardDiaDaSemana()) || b.getRewardFimDESemana() > r.getRewardFimDESemana()) {
+                        x = 2;
                     }
                 }
                 break;
-
         }
-
         return x;
-
     }
-
 }
 
 
