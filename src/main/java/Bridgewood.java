@@ -2,8 +2,10 @@ public class Bridgewood{
     private int classificacao;
     private String nomeHotel;
     private String tipoCliente;
-    private Double diaDaSemana;
-    private Double fimDESemana;
+    private Double regularDiaDaSemana;
+    private Double rewardDiaDaSemana;
+    private Double regularFimDESemana;
+    private Double rewardFimDESemana;
 
 
     public int getClassificacao() {
@@ -17,11 +19,6 @@ public class Bridgewood{
         nomeHotel = "Bridgewood";
         return nomeHotel;
     }
-
-    public void setNomeHotel(String nomeHotel) {
-        this.nomeHotel = nomeHotel;
-    }
-
     public String getTipoCliente() {
         return tipoCliente;
     }
@@ -30,19 +27,24 @@ public class Bridgewood{
         this.tipoCliente = tipoCliente;
     }
 
-    public Double getDiaDaSemana() {
-        if (getTipoCliente().equals("regular")){
-            this.diaDaSemana=160.0;
-        }
-        else if(getTipoCliente().equals("rewards")){
-            this.diaDaSemana=110.0;
-        }
-        return diaDaSemana;
+    public Double getRegularDiaDaSemana() {
+        regularDiaDaSemana = 160.0;
+        return regularDiaDaSemana;
     }
 
-    public Double getFimDESemana() {
-        if (getTipoCliente().equals("regular")){this.fimDESemana=60.0;}
-        else if (getTipoCliente().equals("rewards")){this.fimDESemana=50.0;}
-        return fimDESemana;
+    public Double getRewardDiaDaSemana() {
+        rewardDiaDaSemana=110.0;
+        return rewardDiaDaSemana;
     }
+
+    public Double getRegularFimDESemana() {
+        regularFimDESemana = 60.0;
+        return regularFimDESemana;
+    }
+
+    public Double getRewardFimDESemana() {
+        rewardFimDESemana = 50.0;
+        return rewardFimDESemana;
+    }
+
 }

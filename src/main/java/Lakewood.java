@@ -2,8 +2,10 @@ public class Lakewood {
     private int classificacao;
     private String nomeHotel;
     private String tipoCliente;
-    private Double diaDaSemana;
-    private Double fimDESemana;
+    private Double regularDiaDaSemana;
+    private Double rewardDiaDaSemana;
+    private Double regularFimDESemana;
+    private Double rewardFimDESemana;
 
 
     public int getClassificacao() {
@@ -23,25 +25,24 @@ public class Lakewood {
         this.tipoCliente = tipoCliente;
     }
 
-    public Double getDiaDaSemana() {
-        if (getTipoCliente().equals("regular")){
-            this.diaDaSemana=110.0;
-        }
-        else if(getTipoCliente().equals("rewards")){
-            this.diaDaSemana=90.0;
-        }
-
-        return diaDaSemana;
+    public Double getRegularDiaDaSemana() {
+        regularDiaDaSemana = 110.0;
+        return regularDiaDaSemana;
     }
 
-    public Double getFimDESemana() {
-        if (getTipoCliente().equals("regular")) {
-            this.fimDESemana=80.0;
-        }
-        else if (getTipoCliente().equals("rewards")){
-            this.fimDESemana=80.0;
-        }
-        return fimDESemana;
+    public Double getRewardDiaDaSemana() {
+        rewardDiaDaSemana=80.0;
+        return rewardDiaDaSemana;
+    }
+
+    public Double getRegularFimDESemana() {
+        regularFimDESemana = 90.0;
+        return regularFimDESemana;
+    }
+
+    public Double getRewardFimDESemana() {
+        rewardFimDESemana = 80.0;
+        return rewardFimDESemana;
     }
 
 }

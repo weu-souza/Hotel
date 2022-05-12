@@ -2,8 +2,10 @@ public class Ridgewood {
     private int classificacao;
     private String nomeHotel;
     private String tipoCliente;
-    private Double diaDaSemana;
-    private Double fimDESemana;
+    private Double regularDiaDaSemana;
+    private Double rewardDiaDaSemana;
+    private Double regularFimDESemana;
+    private Double rewardFimDESemana;
 
     public int getClassificacao() {
         classificacao = 5;
@@ -21,21 +23,23 @@ public class Ridgewood {
     public void setTipoCliente(String tipoCliente) {
         this.tipoCliente = tipoCliente;
     }
-
-    public Double getDiaDaSemana() {
-        if (getTipoCliente().equals("regular")){
-            this.diaDaSemana=220.0;
-        }
-        else if(getTipoCliente().equals("rewards")){
-            this.diaDaSemana=100.0;
-        }
-        return diaDaSemana;
+    public Double getRegularDiaDaSemana() {
+        regularDiaDaSemana = 220.0;
+        return regularDiaDaSemana;
     }
 
-    public Double getFimDESemana() {
-        if (getTipoCliente().equals("regular")){this.fimDESemana=150.0;}
-        else if (getTipoCliente().equals("rewards")){this.fimDESemana=40.0;}
-        return fimDESemana;
+    public Double getRewardDiaDaSemana() {
+        rewardDiaDaSemana=100.0;
+        return rewardDiaDaSemana;
     }
 
+    public Double getRegularFimDESemana() {
+        regularFimDESemana = 150.0;
+        return regularFimDESemana;
+    }
+
+    public Double getRewardFimDESemana() {
+        rewardFimDESemana = 40.0;
+        return rewardFimDESemana;
+    }
 }
